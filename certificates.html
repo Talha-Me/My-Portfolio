@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification Showcase | Abu Talha Akash</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body { background: #000; color: #fff; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
+        .cert-container { max-width: 1200px; margin: 30px auto; padding: 20px; }
+        
+        /* Back Button at Top */
+        .top-nav { display: flex; justify-content: flex-start; margin-bottom: 40px; }
+        .back-btn { 
+            display: inline-block; 
+            background: crimson; 
+            color: #fff; 
+            padding: 10px 25px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+        }
+        .back-btn:hover { background: #a10f2d; transform: scale(1.05); }
+
+        h1 { text-align: center; font-size: 36px; margin-bottom: 60px; letter-spacing: 1px; }
+
+        .section-title { 
+            font-size: 24px; 
+            color: crimson; 
+            margin-bottom: 30px; 
+            border-left: 5px solid crimson; 
+            padding-left: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .cert-category { margin-bottom: 80px; }
+
+        /* Certificate Grid with Auto Map */
+        .cert-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+        }
+
+        .cert-item { 
+            background: #111; 
+            padding: 15px; 
+            border-radius: 15px; 
+            border: 1px solid #222; 
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cert-item:hover { 
+            border-color: crimson; 
+            transform: translateY(-8px); 
+            box-shadow: 0 12px 25px rgba(220, 20, 60, 0.15);
+        }
+
+        /* Image Uniformity System */
+        .img-box {
+            width: 100%;
+            height: 220px; /* Fixed height for uniformity */
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #222;
+        }
+
+        .cert-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; /* Auto-crops to fill the box perfectly */
+            display: block;
+            cursor: zoom-in;
+            transition: 0.5s;
+        }
+        
+        .cert-item:hover img { transform: scale(1.1); }
+
+        .cert-info { text-align: center; margin-bottom: 15px; }
+        .cert-info h4 { font-size: 15px; margin: 0; color: #eee; font-weight: 500; line-height: 1.4; }
+
+        /* Download Button */
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: transparent;
+            color: crimson;
+            border: 1px solid crimson;
+            padding: 8px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: crimson;
+            color: #fff;
+        }
+
+        /* Lightbox Style */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox img { max-width: 90%; max-height: 80%; border: 3px solid #fff; border-radius: 5px; }
+        #lightbox:target { display: flex; }
+        .close-lightbox { position: absolute; top: 20px; right: 30px; font-size: 40px; color: #fff; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 28px; }
+            .cert-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cert-container">
+        <div class="top-nav">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        </div>
+
+        <h1>Expertise <span style="color: crimson;">Milestones</span></h1>
+        
+        <div class="cert-category" id="it-support">
+            <h2 class="section-title">IT Support & Services</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="img-box"><img src="IT Support Service Level 3_page-0001.jpg" alt="Cert" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>National Skill Certificate Level-3</h4></div>
+                    <a href="IT Support Service Level 3_page-0001.jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+                <div class="cert-item">
+                    <div class="img-box"><img src="IT HP.jpg" alt="Cert" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>IT For Business</h4></div>
+                    <a href="IT HP.jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+                <div class="cert-item">
+                    <div class="img-box"><img src="award.jpg" alt="Cert" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>Technical Excellence Award</h4></div>
+                    <a href="award.jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-category" id="networking">
+            <h2 class="section-title">Networking Specialist</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="img-box"><img src="Networking_Basics_Badge20241018-7-y3sjyp_page-0001 (1).jpg" alt="Cert" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>Basic Networking From Cisco</h4></div>
+                    <a href="Networking_Basics_Badge20241018-7-y3sjyp_page-0001 (1).jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+                <div class="cert-item">
+                    <div class="img-box"><img src="Computer Office Application (1)_page-0001 (2).jpg" alt="Cert" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>Computer Office Application</h4></div>
+                    <a href="Computer Office Application (1)_page-0001 (2).jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-category" id="web-dev">
+            <h2 class="section-title">Web & Python Development</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="img-box"><img src="Copy of Introduction to Web Development with HTML,CSS, Javascript_page-0001.jpg" alt="Cert" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>Full-Stack Development</h4></div>
+                    <a href="Copy of Introduction to Web Development with HTML,CSS, Javascript_page-0001.jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+                <div class="cert-item">
+                    <div class="img-box"><img src="Python Essentials 1_page-0001.jpg" alt="Cert" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>Python Essentials 1</h4></div>
+                    <a href="Python Essentials 1_page-0001.jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+                <div class="cert-item">
+                    <div class="img-box"><img src="Python Essentials 2_page-0001.jpg" alt="Cert" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>Python Essentials 2</h4></div>
+                    <a href="Python Essentials 2_page-0001.jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-category" id="english">
+            <h2 class="section-title">English Proficiency</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="img-box"><img src="ielts-1.jpg" alt="IELTS" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>Official IELTS Score Card</h4></div>
+                    <a href="ielts-1.jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+                <div class="cert-item">
+                    <div class="img-box"><img src="english-2.jpg" alt="Cert" onclick="openLightbox(this.src)"></div>
+                    <div class="cert-info"><h4>Advanced Speaking Cert</h4></div>
+                    <a href="english-2.jpg" download class="download-btn"><i class="fas fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-category" id="academic">
+            <h2 class="section-title">Academic Qualifications</h2>
+            <div class="cert-grid">
+                <div class="cert-item"><div class="img-box"><img src="1st semster .jpg" alt="D" onclick="openLightbox(this.src)"></div><div class="cert-info"><h4>1st Semester Result</h4></div><a href="1st semster .jpg" download class="download-btn">Download</a></div>
+                <div class="cert-item"><div class="img-box"><img src="2nd semester.jpg" alt="D" onclick="openLightbox(this.src)"></div><div class="cert-info"><h4>2nd Semester Result</h4></div><a href="2nd semester.jpg" download class="download-btn">Download</a></div>
+                <div class="cert-item"><div class="img-box"><img src="3rd sermester.jpg" alt="D" onclick="openLightbox(this.src)"></div><div class="cert-info"><h4>3rd Semester Result</h4></div><a href="3rd sermester.jpg" download class="download-btn">Download</a></div>
+                <div class="cert-item"><div class="img-box"><img src="4th semester.jpg" alt="D" onclick="openLightbox(this.src)"></div><div class="cert-info"><h4>4th Semester Result</h4></div><a href="4th semester.jpg" download class="download-btn">Download</a></div>
+                <div class="cert-item"><div class="img-box"><img src="5th semester.jpg" alt="D" onclick="openLightbox(this.src)"></div><div class="cert-info"><h4>5th Semester Result</h4></div><a href="5th semester.jpg" download class="download-btn">Download</a></div>
+                <div class="cert-item"><div class="img-box"><img src="6th semester.jpg" alt="D" onclick="openLightbox(this.src)"></div><div class="cert-info"><h4>6th Semester Result</h4></div><a href="6th semester.jpg" download class="download-btn">Download</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
