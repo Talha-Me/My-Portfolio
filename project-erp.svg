@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="erp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <filter id="erp-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="#f8fafc"/>
+
+  <!-- Top Browser Bar -->
+  <rect x="0" y="0" width="800" height="40" fill="#ffffff"/>
+  <line x1="0" y1="40" x2="800" y2="40" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="24" cy="20" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="20" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="20" r="5" fill="#10b981"/>
+  <rect x="180" y="7" width="440" height="26" rx="8" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="400" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">🔒 https://erp.talhabyte.dev/tenant/dhaka-hq/general-ledger</text>
+
+  <!-- Left Sidebar Mini -->
+  <g transform="translate(0, 40)">
+    <rect width="180" height="440" fill="#0f172a"/>
+    <text x="24" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#ffffff">EDUMASTER ERP</text>
+    <text x="24" y="52" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#94a3b8">Multi-Tenant Core</text>
+
+    <!-- Nav list -->
+    <rect x="16" y="74" width="148" height="32" rx="8" fill="#e11d48"/>
+    <text x="32" y="94" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#ffffff">📊 General Ledger</text>
+
+    <text x="32" y="132" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#94a3b8">📦 Warehouse Stock</text>
+    <text x="32" y="166" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#94a3b8">🧾 PDF Invoicing</text>
+    <text x="32" y="200" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#94a3b8">👥 Staff Payroll</text>
+    
+    <rect x="16" y="370" width="148" height="44" rx="8" fill="#1e293b"/>
+    <text x="26" y="390" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#10b981">● Celery Queue: OK</text>
+    <text x="26" y="404" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="500" fill="#94a3b8">Redis Sync: 0ms lag</text>
+  </g>
+
+  <!-- Main Canvas Right -->
+  <g transform="translate(204, 60)" filter="url(#erp-shadow)">
+    <!-- Header Tenant Bar -->
+    <rect width="570" height="54" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="20" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#0f172a">Tenant: UKA Technical Institute (Campus 01)</text>
+    <rect x="420" y="14" width="130" height="26" rx="6" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <text x="485" y="31" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#059669" text-anchor="middle">ISOLATED SCHEMA</text>
+
+    <!-- Double-Entry Accounting Ledger Table -->
+    <g transform="translate(0, 70)">
+      <rect width="570" height="310" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+      <text x="20" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#0f172a">Real-Time Double-Entry Journal Audit</text>
+
+      <!-- Table Header -->
+      <rect x="20" y="48" width="530" height="32" rx="8" fill="#f8fafc"/>
+      <text x="36" y="68" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b">TRANSACTION ID</text>
+      <text x="180" y="68" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b">ACCOUNT</text>
+      <text x="340" y="68" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b">DEBIT</text>
+      <text x="460" y="68" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#64748b">CREDIT</text>
+
+      <!-- Row 1 -->
+      <g transform="translate(20, 92)">
+        <text x="16" y="18" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#0f172a">#TX-2026-9041</text>
+        <text x="160" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#334155">Lab Server Equipment</text>
+        <text x="320" y="18" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">$4,850.00</text>
+        <text x="440" y="18" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#94a3b8">-</text>
+      </g>
+      <line x1="20" y1="124" x2="550" y2="124" stroke="#f1f5f9"/>
+
+      <!-- Row 2 -->
+      <g transform="translate(20, 134)">
+        <text x="16" y="18" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#0f172a">#TX-2026-9042</text>
+        <text x="160" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#334155">Accounts Payable (Hardware)</text>
+        <text x="320" y="18" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#94a3b8">-</text>
+        <text x="440" y="18" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#e11d48">$4,850.00</text>
+      </g>
+      <line x1="20" y1="166" x2="550" y2="166" stroke="#f1f5f9"/>
+
+      <!-- Row 3 -->
+      <g transform="translate(20, 176)">
+        <text x="16" y="18" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#0f172a">#TX-2026-9043</text>
+        <text x="160" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#334155">IELTS Exam Candidate Fees</text>
+        <text x="320" y="18" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">$12,240.00</text>
+        <text x="440" y="18" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#94a3b8">-</text>
+      </g>
+
+      <!-- Bottom Status Banner -->
+      <rect x="20" y="240" width="530" height="42" rx="10" fill="#fef3c7" stroke="#fde68a"/>
+      <text x="36" y="266" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#92400e">⚡ Python 3.12 / Django REST Framework · Celery Async Background Worker Syncing</text>
+    </g>
+  </g>
+</svg>

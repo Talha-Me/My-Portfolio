@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ecom-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <filter id="ec-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#ecom-bg)"/>
+
+  <!-- Top Browser Bar -->
+  <rect x="0" y="0" width="800" height="40" fill="#ffffff"/>
+  <line x1="0" y1="40" x2="800" y2="40" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="24" cy="20" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="20" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="20" r="5" fill="#10b981"/>
+  <rect x="180" y="7" width="440" height="26" rx="8" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="400" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">🔒 https://store.talhabyte.dev/admin/operations-telemetry</text>
+
+  <!-- Left: Storefront Featured Product Card -->
+  <g transform="translate(30, 65)" filter="url(#ec-shadow)">
+    <rect width="340" height="380" rx="20" fill="#ffffff" stroke="#e2e8f0"/>
+    
+    <!-- Image Box -->
+    <rect x="16" y="16" width="308" height="180" rx="14" fill="#f8fafc" stroke="#f1f5f9"/>
+    <text x="170" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="48" text-anchor="middle">💻</text>
+    <rect x="26" y="26" width="70" height="20" rx="6" fill="#e11d48"/>
+    <text x="61" y="40" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">HOT DEAL</text>
+    
+    <!-- Product Details -->
+    <g transform="translate(16, 212)">
+      <text x="0" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="800" fill="#0f172a">MacBook Pro M3 Max 16"</text>
+      <text x="0" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#64748b">36GB Unified Memory · 1TB NVMe SSD</text>
+      
+      <text x="0" y="68" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800" fill="#e11d48">$3,499.00</text>
+      <text x="130" y="68" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#94a3b8" text-decoration="line-through">$3,999.00</text>
+
+      <rect x="0" y="90" width="308" height="42" rx="12" fill="#0f172a"/>
+      <text x="154" y="116" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">⚡ Add to Instant Cart</text>
+    </g>
+  </g>
+
+  <!-- Right: Admin Operations Analytics Dashboard -->
+  <g transform="translate(395, 65)" filter="url(#ec-shadow)">
+    <rect width="375" height="380" rx="20" fill="#ffffff" stroke="#e2e8f0"/>
+    
+    <g transform="translate(20, 20)">
+      <div xmlns="http://www.w3.org/1999/xhtml"></div>
+      <text x="0" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#0f172a">Admin Operations Suite</text>
+      <text x="0" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#64748b">Next.js App Router · Real-Time Sales Telemetry</text>
+
+      <!-- Revenue Metric Box -->
+      <g transform="translate(0, 48)">
+        <rect width="160" height="70" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="14" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#64748b">Total Gross Volume</text>
+        <text x="14" y="48" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="800" fill="#10b981">$84,230.50</text>
+      </g>
+
+      <!-- Active Orders Metric Box -->
+      <g transform="translate(175, 48)">
+        <rect width="160" height="70" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+        <text x="14" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#64748b">Completed Orders</text>
+        <text x="14" y="48" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="800" fill="#2563eb">1,248 Units</text>
+      </g>
+
+      <!-- Real-time Chart Vector Mockup -->
+      <g transform="translate(0, 134)">
+        <rect width="335" height="120" rx="14" fill="#faf5ff" stroke="#f3e8ff"/>
+        <text x="14" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#7e22ce">Live Conversion Telemetry</text>
+        
+        <!-- SVG Line chart curve -->
+        <path d="M 20,95 Q 80,80 130,50 T 220,70 T 315,30" fill="none" stroke="#9333ea" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="315" cy="30" r="5" fill="#9333ea"/>
+        <text x="290" y="22" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#7e22ce">+28.4%</text>
+      </g>
+
+      <!-- Low Stock Warning Badge -->
+      <g transform="translate(0, 270)">
+        <rect width="335" height="46" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+        <text x="14" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#9f1239">⚠️ Low Stock Alert: Sony WH-1000XM5 (Only 3 left in Warehouse)</text>
+      </g>
+    </g>
+  </g>
+</svg>

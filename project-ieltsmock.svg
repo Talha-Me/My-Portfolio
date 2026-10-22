@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bc-nav" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="ielts-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#f8fafc"/>
+
+  <!-- Top Browser Bar -->
+  <rect x="0" y="0" width="800" height="40" fill="#ffffff"/>
+  <line x1="0" y1="40" x2="800" y2="40" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="24" cy="20" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="20" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="20" r="5" fill="#10b981"/>
+  <rect x="180" y="7" width="440" height="26" rx="8" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="400" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">🔒 https://ieltsmockpoint.com/exam/reading-simulation</text>
+
+  <!-- Official British Council Exam Header -->
+  <rect x="0" y="40" width="800" height="52" fill="url(#bc-nav)"/>
+  <text x="24" y="72" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#ffffff" letter-spacing="1">IELTS MOCK POINT</text>
+  <rect x="180" y="52" width="100" height="26" rx="6" fill="#e11d48"/>
+  <text x="230" y="69" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">TEST IN SESSION</text>
+
+  <!-- Exam Countdown Timer -->
+  <g transform="translate(620, 52)">
+    <rect width="156" height="28" rx="8" fill="#ffffff" opacity="0.1"/>
+    <circle cx="16" cy="14" r="5" fill="#f43f5e"/>
+    <text x="30" y="19" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#ffffff">00 : 58 : 42</text>
+  </g>
+
+  <!-- Split Screen Exam Content -->
+  <!-- Left Column: Reading Passage Text -->
+  <g transform="translate(24, 110)" filter="url(#ielts-shadow)">
+    <rect width="360" height="310" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="16" y="16" width="130" height="22" rx="6" fill="#f1f5f9"/>
+    <text x="81" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#475569" text-anchor="middle">PASSAGE 1 — ACADEMIC</text>
+    
+    <text x="16" y="64" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#0f172a">The Development of Rail Telemetry</text>
+    
+    <text x="16" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="500" fill="#64748b" leading="18">
+      <tspan x="16" dy="0">Modern high-speed locomotives utilize bi-directional radio telemetry</tspan>
+      <tspan x="16" dy="16">to constantly relay mechanical diagnostic data and geospatial coordinates</tspan>
+      <tspan x="16" dy="16">to central dispatch stations. By aggregating real-time velocity curves,</tspan>
+      <tspan x="16" dy="16">sub-second precision schedules can be predicted across nationwide</tspan>
+      <tspan x="16" dy="16">rail junctions, preventing bottleneck congestion...</tspan>
+    </text>
+
+    <!-- Native Audio Waveform Player Widget -->
+    <g transform="translate(16, 195)">
+      <rect width="328" height="52" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+      <circle cx="28" cy="26" r="14" fill="#e11d48"/>
+      <polygon points="25,20 34,26 25,32" fill="#ffffff"/>
+      <text x="52" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#0f172a">Listening Track 03 (Accent: British RP)</text>
+      <text x="52" y="38" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#64748b">02:14 / 04:30 · Single Playback Lock Active</text>
+    </g>
+
+    <rect x="16" y="262" width="328" height="34" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="30" y="283" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#15803d">✦ Anti-Inspect Lockdown & Keystroke Auto-Save ON</text>
+  </g>
+
+  <!-- Right Column: Interactive Questions & Band Score Simulation -->
+  <g transform="translate(410, 110)" filter="url(#ielts-shadow)">
+    <rect width="366" height="310" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"></div>
+    <rect x="16" y="16" width="120" height="22" rx="6" fill="#eff6ff"/>
+    <text x="76" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#2563eb" text-anchor="middle">QUESTIONS 1 – 5</text>
+
+    <text x="16" y="62" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#0f172a">Choose TRUE, FALSE, or NOT GIVEN:</text>
+
+    <!-- Question 1 row -->
+    <g transform="translate(16, 78)">
+      <rect width="334" height="42" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="12" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#334155">1. Telemetry replaces radio voice dispatch altogether.</text>
+    </g>
+
+    <!-- Simulated Diagnostic Result Card -->
+    <g transform="translate(16, 135)">
+      <rect width="334" height="110" rx="12" fill="#fff1f2" stroke="#fecdd3"/>
+      <text x="16" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#9f1239">INSTANT ALGORITHMIC BAND SCORING</text>
+      
+      <g transform="translate(16, 40)">
+        <text x="0" y="36" font-family="'JetBrains Mono', monospace" font-size="34" font-weight="800" fill="#e11d48">8.5</text>
+        <text x="70" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#0f172a">Overall Band Score</text>
+        <text x="70" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#64748b">Listening: 9.0 · Reading: 8.5 · Writing: 8.0</text>
+      </g>
+    </g>
+
+    <!-- Bottom Question Palette Pill Strip (1-10) -->
+    <g transform="translate(16, 260)">
+      <text x="0" y="12" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#64748b">Question Palette:</text>
+      <rect x="0" y="18" width="22" height="20" rx="4" fill="#e11d48"/><text x="11" y="32" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+      <rect x="26" y="18" width="22" height="20" rx="4" fill="#e11d48"/><text x="37" y="32" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+      <rect x="52" y="18" width="22" height="20" rx="4" fill="#e11d48"/><text x="63" y="32" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+      <rect x="78" y="18" width="22" height="20" rx="4" fill="#f1f5f9"/><text x="89" y="32" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#64748b" text-anchor="middle">4</text>
+      <rect x="104" y="18" width="22" height="20" rx="4" fill="#f1f5f9"/><text x="115" y="32" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#64748b" text-anchor="middle">5</text>
+      <text x="140" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#2563eb">... (40 Questions)</text>
+    </g>
+
+  </g>
+
+  <!-- Bottom Global Status -->
+  <rect x="0" y="445" width="800" height="35" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="24" y="467" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#64748b">UKA Technical Institute Testing Server · Candidate ID: UKA-BD-8902</text>
+  <text x="776" y="467" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#10b981" text-anchor="end">Official British Council Format Validated</text>
+</svg>

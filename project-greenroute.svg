@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="gr-route" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="url(#gr-bg)"/>
+
+  <!-- Map Grid Roads (Faint vector paths) -->
+  <g stroke="#e2e8f0" stroke-width="2.5" fill="none">
+    <path d="M 50,120 Q 200,80 400,140 T 750,110"/>
+    <path d="M 30,280 Q 250,260 500,320 T 780,270"/>
+    <path d="M 180,40 L 220,440"/>
+    <path d="M 420,50 L 390,450"/>
+    <path d="M 620,30 L 650,440"/>
+    <circle cx="400" cy="240" r="160" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 6"/>
+  </g>
+
+  <!-- Navigation Active Route Path -->
+  <path d="M 120,360 C 220,320 280,240 410,210 S 580,180 680,130" fill="none" stroke="url(#gr-route)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 120,360 C 220,320 280,240 410,210 S 580,180 680,130" fill="none" stroke="#6ee7b7" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 8"/>
+
+  <!-- Start Pin (Dormitory) -->
+  <g transform="translate(120, 360)">
+    <circle r="18" fill="#10b981" opacity="0.2"/>
+    <circle r="10" fill="#10b981"/>
+    <circle r="4" fill="#ffffff"/>
+    <text x="0" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#0f172a" text-anchor="middle">Student Campus</text>
+  </g>
+
+  <!-- Midpoint Telemetry (Trenitalia Station) -->
+  <g transform="translate(410, 210)">
+    <circle r="14" fill="#0284c7" opacity="0.2"/>
+    <circle r="8" fill="#0284c7"/>
+    <circle r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- End Pin (Destination) -->
+  <g transform="translate(680, 130)">
+    <circle r="20" fill="#e11d48" opacity="0.2"/>
+    <circle r="11" fill="#e11d48"/>
+    <circle r="4" fill="#ffffff"/>
+    <text x="0" y="-18" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#be123c" text-anchor="middle">University Faculty</text>
+  </g>
+
+  <!-- Browser Header Bar -->
+  <rect x="0" y="0" width="800" height="42" fill="#ffffff" border-bottom="1px solid #e2e8f0"/>
+  <line x1="0" y1="42" x2="800" y2="42" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="24" cy="21" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="21" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="21" r="5" fill="#10b981"/>
+  
+  <rect x="180" y="8" width="440" height="26" rx="8" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="400" y="25" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">🔒 https://greenrouteeu.xyz/italy/transit-live</text>
+
+  <!-- Card 1: Live Train Telemetry (Italy Train Koi) -->
+  <g transform="translate(40, 70)" filter="url(#shadow)">
+    <rect width="270" height="110" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="16" y="16" width="34" height="34" rx="10" fill="#f0fdf4"/>
+    <text x="33" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" fill="#16a34a" text-anchor="middle">🚆</text>
+    <text x="60" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#0f172a">Frecciarossa 9540</text>
+    <text x="60" y="44" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#16a34a">● ON TIME · Binario 4</text>
+    <line x1="16" y1="62" x2="254" y2="62" stroke="#f1f5f9" stroke-width="1"/>
+    <text x="16" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#64748b">Milan Centrale ➔ Bologna</text>
+    <rect x="16" y="90" width="130" height="14" rx="4" fill="#ecfdf5"/>
+    <text x="22" y="100" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#059669">Live Speed: 245 km/h</text>
+  </g>
+
+  <!-- Card 2: Anti-Mistake Shield & GBFS Bikeshare -->
+  <g transform="translate(490, 310)" filter="url(#shadow)">
+    <rect width="270" height="130" rx="16" fill="#ffffff" stroke="#fecdd3"/>
+    <rect x="16" y="16" width="34" height="34" rx="10" fill="#fff1f2"/>
+    <text x="33" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" fill="#e11d48" text-anchor="middle">🛡️</text>
+    <text x="60" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#9f1239">Anti-Mistake Shield</text>
+    <text x="60" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#64748b">Platform Guidance Active</text>
+    
+    <rect x="16" y="60" width="238" height="30" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="24" y="79" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#334155">⚠️ Validate €2.20 ticket within 3 mins</text>
+    
+    <rect x="16" y="96" width="112" height="22" rx="6" fill="#eff6ff"/>
+    <text x="72" y="111" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#2563eb" text-anchor="middle">🚲 BikeMi: 8 Open</text>
+    
+    <rect x="136" y="96" width="118" height="22" rx="6" fill="#f0fdf4"/>
+    <text x="195" y="111" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#16a34a" text-anchor="middle">🔊 Audio Active</text>
+  </g>
+</svg>

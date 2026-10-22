@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tk-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="tk-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Dark Map Canvas for Bangladesh Railway -->
+  <rect width="800" height="480" fill="url(#tk-bg)"/>
+
+  <!-- Top Browser Bar -->
+  <rect x="0" y="0" width="800" height="40" fill="#1e293b"/>
+  <circle cx="24" cy="20" r="5" fill="#ef4444"/>
+  <circle cx="40" cy="20" r="5" fill="#f59e0b"/>
+  <circle cx="56" cy="20" r="5" fill="#10b981"/>
+  <rect x="180" y="7" width="440" height="26" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="400" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">🔒 https://trainkoi.com/live/suborno-express-702</text>
+
+  <!-- Faint Map Vector Contours -->
+  <g stroke="#334155" stroke-width="1.5" fill="none" opacity="0.4">
+    <path d="M 50,400 Q 180,300 250,150 T 600,80"/>
+    <path d="M 120,450 Q 320,380 480,240 T 750,180"/>
+    <circle cx="340" cy="260" r="180"/>
+  </g>
+
+  <!-- Real Railway Track Vector (Dhaka to Chittagong Corridor) -->
+  <path d="M 160,420 Q 280,310 380,250 T 640,110" fill="none" stroke="#e11d48" stroke-width="6" stroke-linecap="round" filter="url(#tk-glow)"/>
+  <path d="M 160,420 Q 280,310 380,250 T 640,110" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 10"/>
+
+  <!-- Stations along the track -->
+  <!-- Dhaka Kamalapur -->
+  <circle cx="160" cy="420" r="9" fill="#e11d48"/>
+  <circle cx="160" cy="420" r="4" fill="#ffffff"/>
+  <text x="160" y="445" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#f8fafc" text-anchor="middle">Kamalapur (Dhaka)</text>
+
+  <!-- Dhaka Airport -->
+  <circle cx="280" cy="310" r="8" fill="#0284c7"/>
+  <circle cx="280" cy="310" r="3" fill="#ffffff"/>
+  <text x="280" y="335" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">Airport Stn.</text>
+
+  <!-- Current Live Train Marker (Pulsing Radar Wave) -->
+  <g transform="translate(380, 250)">
+    <circle r="36" fill="#e11d48" opacity="0.25">
+      <animate attributeName="r" values="18;45;18" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.05;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="14" fill="#e11d48" stroke="#ffffff" stroke-width="3"/>
+    <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">🚆</text>
+  </g>
+
+  <!-- Chittagong Station -->
+  <circle cx="640" cy="110" r="9" fill="#10b981"/>
+  <circle cx="640" cy="110" r="4" fill="#ffffff"/>
+  <text x="640" y="95" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#34d399" text-anchor="middle">Chattogram Stn.</text>
+
+  <!-- Live Telemetry Hud Overlay Left -->
+  <g transform="translate(30, 60)">
+    <rect width="280" height="150" rx="18" fill="rgba(30, 41, 59, 0.85)" stroke="#e11d48" stroke-width="1.5" backdrop-filter="blur(12px)"/>
+    
+    <g transform="translate(16, 16)">
+      <rect width="80" height="20" rx="6" fill="#e11d48"/>
+      <text x="40" y="14" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">TRAIN 702</text>
+      
+      <text x="92" y="15" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#ffffff">Suborno Express</text>
+      
+      <text x="0" y="44" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8">Live Speed: 82 km/h · ETA: 2h 45m</text>
+      
+      <line x1="0" y1="56" x2="248" y2="56" stroke="#334155"/>
+
+      <text x="0" y="76" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#94a3b8">Current GPS Position:</text>
+      <text x="0" y="92" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#f8fafc">23.8512° N, 90.4076° E (Brahmanbaria)</text>
+
+      <rect x="0" y="104" width="248" height="18" rx="5" fill="rgba(16, 185, 129, 0.15)"/>
+      <text x="124" y="117" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#34d399" text-anchor="middle">● Socket.io Connected · Latency: 12ms</text>
+    </g>
+  </g>
+
+  <!-- Delay Status Pill Right -->
+  <g transform="translate(540, 360)">
+    <rect width="230" height="90" rx="16" fill="rgba(30, 41, 59, 0.9)" stroke="#334155"/>
+    <g transform="translate(16, 16)">
+      <text x="0" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#f8fafc">Delay Estimation (AI)</text>
+      <text x="0" y="38" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800" fill="#10b981">ON TIME (0m)</text>
+      <text x="0" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#94a3b8">Crowdsourced from 148 Passenger Nodes</text>
+    </g>
+  </g>
+</svg>
